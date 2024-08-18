@@ -1,0 +1,66 @@
+.sidebar{
+  background: #fff;
+  width: 16%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  padding-left: 2%;
+  padding-top: 80px;
+  overflow-y: auto;
+}
+.sortcut-links img{
+  width: 20px;
+  margin-right: 20px;
+}
+.side-link{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: fit-content;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.sidebar hr{
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  width: 85%;
+}
+.sunscribed-list h3{
+  font-size: 13px;
+  margin: 20px 0;
+  color: #5a5a5a;
+}
+.sunscribed-list img{
+  width: 25px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.small-sidebar{
+  width: 5%;
+}
+.small-sidebar p{
+  display: none;
+}
+.small-sidebar h3{
+  display: none;
+}
+.small-sidebar hr{
+  width: 50%;
+  margin-bottom: 25px;
+}
+.sidebar::-webkit-scrollbar {
+  width: 12px; /* Adjust the width for vertical scrollbar */
+  height: 12px; /* Adjust the height for horizontal scrollbar */
+}
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scrollbar thumb color */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  border: 3px solid #f1f1f1; /* Adds a border around the thumb to create spacing */
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Change thumb color on hover */
+}
