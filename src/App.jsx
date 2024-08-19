@@ -5,13 +5,11 @@ import Home from './Pages/Home/Home'
 import Video from './Pages/Video/Video'
 const App = () => {
   const [sidebar, setSidebar] = useState(true);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [searchSubmit, setSearchSubmit] = useState(false);
   return (
     <div>
-      <Navbar setSidebar={setSidebar} setSearchQuery={setSearchQuery} setSearchSubmit={setSearchSubmit}/>
+      <Navbar setSidebar={setSidebar}/>
       <Routes>
-        <Route path='/' element={<Home sidebar={sidebar} searchQuery={searchQuery} setSearchQuery={setSearchQuery} searchSubmit={searchSubmit}/>}/>
+        <Route path='/' element={<Home sidebar={sidebar}/>}/>
         <Route path='/video/:categoryId/:videoId' element={<Video />} />
       </Routes>
     </div>
