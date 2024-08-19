@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
 import menu_icon from '../../assets/menu.png'
 import logo from '../../assets/logo.png'
@@ -9,7 +9,18 @@ import more_icon from '../../assets/more.png'
 import notification_icon from '../../assets/notification.png'
 import user_profile2 from '../../assets/user_profile2.jpg'
 import { Link } from 'react-router-dom'
-const Navbar = ({setSidebar}) => {
+const Navbar = ({setSidebar, setSearchQuery, setSearchSubmit}) => {
+  const [inputValue, setInputValue] = useState('');
+  const handleSearch = () => {
+    setSearchQuery(inputValue);
+    setSearchSubmit(prev => !prev);
+  }
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      handleSearch();
+    }
+  };
   return (
     <nav className='flex-div'>
       <div className="nav-left flex-div">
@@ -20,8 +31,8 @@ const Navbar = ({setSidebar}) => {
       </div>
       <div className="nav-middle flex-div">
         <div className="search-box flex-div">
-          <input type='text' placeholder='search' />
-          <img src={search_icon} alt='' />
+          <input type='text' placeholder='search' value={inputValue} onChange={(e) => setInputValue(e.target.value)} onKeyDown={handleKeyDown} />
+          <img src={search_icon} alt='' onClick={handleSearch}/>
         </div>
       </div>
       <div className="nav-right flex-div">
