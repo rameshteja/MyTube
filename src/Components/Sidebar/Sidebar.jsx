@@ -14,6 +14,8 @@ import simon from '../../assets/simon.png'
 import tom from '../../assets/tom.png'
 import megan from '../../assets/megan.png'
 import cameron from '../../assets/cameron.png'
+import user_profile2 from '../../assets/user_profile2.jpg'
+
 const Sidebar = ({sidebar, category, setCategory}) => {
   return (
     <div className={`sidebar ${sidebar?"":"small-sidebar"}`}>
@@ -49,20 +51,20 @@ const Sidebar = ({sidebar, category, setCategory}) => {
       </div>
       <div className="sunscribed-list">
         <h3>Subscribed</h3>
-        <div className="side-link">
-          <img src={jack} alt="profile_image" /><p>PewdiePie</p>
+        <div className="sidebar-subscriber-link">
+          <img src={user_profile2} alt="profile_image"/><p>Ramesh</p>
         </div>
-        <div className="side-link">
-          <img src={simon} alt=" " /><p>MrBeast</p>
+        <div className="sidebar-subscriber-link">
+          <img src={user_profile2} alt=" " /><p>Urmila</p>
         </div>
-        <div className="side-link">
-          <img src={tom} alt="profile_image" /><p>Justin Bieber</p>
+        <div className="sidebar-subscriber-link">
+          <img src={user_profile2} alt="profile_image" /><p>Yogitha</p>
         </div>
-        <div className="side-link">
-          <img src={megan} alt="profile_image" /><p>5-Minute Crafts</p>
+        <div className="sidebar-subscriber-link">
+          <img src={user_profile2} alt="profile_image" /><p>Mokshi</p>
         </div>
-        <div className="side-link">
-          <img src={cameron} alt="profile_image" /><p>Nas daily</p>
+        <div className="sidebar-subscriber-link">
+          <img src={user_profile2} alt="profile_image" /><p>Raju</p>
         </div>
       </div>
     </div>
